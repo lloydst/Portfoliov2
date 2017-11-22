@@ -1,0 +1,71 @@
+/* Put your css in here */
+
+button[name=num] {
+    background-color: light gray;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
+  button[name=operator]{
+    background-color: lightblue;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
+  button[name=clear]{
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
+  button[name=equal]{
+    background-color: lightgreen;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
+
+  .output {
+    width: 215px;
+    height: 25px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+    text-align:right;
+    background-color: white;
+  }
+  .answer {
+    align-self: right;
+    width: 215px;
+    height: 25px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+    text-align:right;
+    background-color: white;
+  }
+  button[name=clearAnswer]{
+    background-color: pink;
+    width: 218px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
+  button {
+    border-radius: 10px;
+  }
+  .wrapper{
+    background-color: navy;
+    width:220px;
+    margin: 100px auto;
+    margin-bottom:80px;
+  }

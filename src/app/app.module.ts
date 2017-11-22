@@ -1,18 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpModule } from '@angular/http';     //depricated
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { InternshipsComponent } from './internships/internships.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutMeComponent,
+    BlogAdminComponent,
+    BlogDetailComponent,
+    BlogsComponent,
+    ContactComponent,
+    FooterComponent,
+    HeaderComponent,
+    InternshipsComponent,
+    NavBarComponent,
+    ProjectsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+    AppRoutingModule,
+    ReactiveFormsModule
+    ],
+  providers: [
+
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

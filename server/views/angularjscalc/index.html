@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJSCalc</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body ng-controller="MainCtrl as vm">
+    <div class="wrapper">
+
+          <p class="calc-display">
+          <div>
+               <div name="output" id="res" class="answer">{{vm.answer}}</div>
+               <button type="button" name="clearAnswer" ng-click="vm.resetAnswer()">clear top bar</button>
+
+          </div>
+          <div name="output" id="res" class="output">{{vm.output}} </div>
+          </p>
+          <div class="row 1">
+               <button type="button" name="num" ng-click='vm.updateOutput("7")'>7</button>
+               <button type="button" name="num" ng-click='vm.updateOutput("8")'>8</button>
+               <button type="button" name="num" ng-click='vm.updateOutput("9")'>9</button>
+               <button type="button" name="operator" ng-click='vm.operate("-")'>-</button>
+          </div>
+          <div class="row 2">
+               <button type="button" name="num" ng-click='vm.updateOutput("4")'>4</button>
+               <button type="button" name="num"ng-click='vm.updateOutput("5")'>5</button>
+               <button type="button" name="num" ng-click='vm.updateOutput("6")'>6</button>
+               <button type="button" name="operator" ng-click='vm.operate("+")'>+</button>
+          </div>
+          <div class="row 3">
+               <button type="button" name="num" ng-click='vm.updateOutput("1")'>1</button>
+               <button type="button" name="num" ng-click='vm.updateOutput("2")'>2</button>
+               <button type="button" name="num" ng-click='vm.updateOutput("3")'>3</button>
+               <button type="button" name="operator" ng-click='vm.operate("*")'>*</button>
+          </div>
+          <div class="row 4">
+               <button type="button" name="num" ng-click='vm.updateOutput("0")'>0</button>
+               <button type="button" name="clear" ng-click='vm.output = 0'>C</button>
+               <button type="button" name="equal" ng-click="vm.equal()">=</button>
+               <button type="button" name="operator" ng-click='vm.operate("/")'>/</button>
+          </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,42 @@
+.mapContainer {
+    width:44em;
+}
+div#map{
+    border: 1px solid black;
+    display: inline-flex;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    border-collapse: collapse
+}
+
+cell {
+    width: 4em;
+    height: 4em;
+    display: inline-flex;
+}
+
+.path{
+
+     background-image: url("../img/2x2-sand-path,50X50.jpg");
+     background-size: 4em;
+     content: ' ';
+ }
+ .bedrock .bedrock{
+    background-color: grey !important;
+    background-image: none;
+}
+
+
+.player {
+    background-color: blue;
+    background-image: none;
+}
+.bomb {
+    background-color: red !important;
+    background-image: none;
+}
+.explosion {
+    background-color: orange;
+    background-image: none;
+}
