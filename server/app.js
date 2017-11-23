@@ -58,7 +58,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
 
 // express paths
-app.use('/', express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 app.use('/projects/jscalc', express.static(path.join(__dirname,'./views/htmlcalc')));
 app.use('/projects/jqcalc', express.static(path.join(__dirname,'./views/jquerycalc')));
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./views/angularjscalc')));
