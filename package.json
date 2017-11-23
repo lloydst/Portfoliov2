@@ -9,8 +9,7 @@
   "scripts": {
     "server": "nodemon ./server/bin/www",
     "ng": "ng",
-    "start": "node ./server/bin/www",
-    "postinstall": "ng build --aot -prod",
+    "start": "ng build --aot -prod && node ./server/bin/www",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e"
