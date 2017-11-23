@@ -72,7 +72,7 @@ app.get('*', (req, res) => {
 });
 
 // Server
-app.set( 'port', ( process.env.PORT || 5000 ));
+app.set( 'port', ( process.env.port || 5000 ));
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
