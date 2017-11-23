@@ -1,6 +1,7 @@
 {
   "name": "boilerplate",
   "version": "0.0.0",
+  "main": "/server/bin/www",
   "engines": {
     "node": "6.11.1"
   },
@@ -8,7 +9,8 @@
   "scripts": {
     "server": "nodemon ./server/bin/www",
     "ng": "ng",
-    "start": "ng build && node server/bin/www",
+    "start": "ng build && node ./server/bin/www",
+    "start2":"ng build && node",
     "postinstall": "ng build --aot -prod",
     "build": "ng build",
     "lint": "ng lint",
