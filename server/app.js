@@ -11,6 +11,7 @@ var http = require('http');
 // routes
 var index = require('./routes/index');
 var api = require('./routes/api');
+
 var port = process.env.PORT || 3000;
 
 //Set up mongoose connection
@@ -18,7 +19,7 @@ var mongoose = require('mongoose');
 
 // need to change this based on env
 var mongoDB= 'mongodb://localhost:27017/portfolio'
-if(process.env.NODE_ENV === "production") {
+if(process.env.NODE_ENV === "prod") {
   return mongoDB = 'mongodb://admin:admin@ds153853.mlab.com:53853/portfolio';
 } else if(process.env.NODE_ENV === "dev"){
   return mongoDB = 'mongodb://localhost:27017/portfolio'
@@ -50,7 +51,7 @@ var app = express();
 // middlewares
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-//app.use(forceSSL());
+app.use(forceSSL());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -76,7 +77,7 @@ app.set( 'port', port);
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
-  return ( 'Node server is running on port ' + app.get( 'port' ));
+  console.log('Node server is running on port ' + app.get( 'port' ));
   });
 
 
