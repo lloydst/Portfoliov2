@@ -33,7 +33,7 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // express setup
-var app = express();
+
 // for heroku
 const forceSSL = function() {
   return function (req, res, next) {
@@ -45,7 +45,7 @@ const forceSSL = function() {
     next();
   }
 }
-
+var app = express();
 
 // middlewares
 // uncomment after placing your favicon in /public
@@ -72,11 +72,12 @@ app.get('*', (req, res) => {
 });
 
 // Server
-var port = process.env.PORT || 5000;
-app.listen(port, function () {
+app.set( 'port', ( process.env.PORT || 5000 ));
 
-  console.log("App now running on port", port);
-});
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
 
 
 
