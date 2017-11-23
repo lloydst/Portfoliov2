@@ -11,7 +11,7 @@ var http = require('http');
 // routes
 var index = require('./routes/index');
 var api = require('./routes/api');
-
+var port = process.env.PORT || 3000;
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
 
 // express paths
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use('/', express.static(path.join(__dirname, '../dist')));
 app.use('/projects/jscalc', express.static(path.join(__dirname,'./views/htmlcalc')));
 app.use('/projects/jqcalc', express.static(path.join(__dirname,'./views/jquerycalc')));
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./views/angularjscalc')));
@@ -72,7 +72,7 @@ app.get('*', (req, res) => {
 });
 
 // Server
-app.set( 'port', ( process.env.port || 5000 ));
+app.set( 'port', port);
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
