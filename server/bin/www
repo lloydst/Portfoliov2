@@ -12,8 +12,8 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '5000');
-
+var portvar = normalizePort(process.env.PORT || '5000');
+app.set('port', portvar)
 
 /**
  * Create HTTP server.
@@ -25,7 +25,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(portvar);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -36,14 +36,14 @@ server.on('listening', onListening);
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
-  if (isNaN(port)) {
+  if (isNaN(portvar)) {
     // named pipe
     return val;
   }
 
   if (port >= 0) {
     // port number
-    return port;
+    return portvar;
   }
 
   return false;
@@ -58,9 +58,9 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  var bind = typeof portvar === 'string'
+    ? 'Pipe ' + portvar
+    : 'Port ' + portvar;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
