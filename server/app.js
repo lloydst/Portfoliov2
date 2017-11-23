@@ -77,8 +77,8 @@ app.set( 'port', port);
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
-  console.log('Node server is running on port ' + app.get( 'port' ));
-  return app.get('port')
+  console.log('Node server is running on '+ app.get('Host')+ app.get( 'port' ));
+  return 'Node server is running on '+ app.get('Host')+ app.get( 'port' )
   });
 
 
