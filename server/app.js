@@ -18,8 +18,8 @@ var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 
 // need to change this based on env
-var mongoDB= 'mongodb://localhost:27017/portfolio'
-if(process.env.NODE_ENV === "production") {
+var mongoDB = String; //'mongodb://localhost:27017/portfolio';
+if(process.env.NODE_ENV === 'production') {
   return mongoDB = 'mongodb://admin:admin@ds153853.mlab.com:53853/portfolio';
 } else if(process.env.NODE_ENV === "dev"){
   return mongoDB = 'mongodb://localhost:27017/portfolio'
