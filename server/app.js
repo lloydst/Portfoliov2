@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cookieParser());
 
 // express paths
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use('/',express.static(path.join(__dirname, '../dist')));
 app.use('/projects/jscalc', express.static(path.join(__dirname,'./views/htmlcalc')));
 app.use('/projects/jqcalc', express.static(path.join(__dirname,'./views/jquerycalc')));
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./views/angularjscalc')));
@@ -72,9 +72,9 @@ app.get('*', (req, res) => {
 });
 
 // Server
+var port = process.env.PORT || 5000;
+app.listen(port, function () {
 
-var server = app.listen(process.env.PORT || 5000, function () {
-  var port = server.address().port;
   console.log("App now running on port", port);
 });
 
