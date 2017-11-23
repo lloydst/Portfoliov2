@@ -13,7 +13,7 @@ interface BlogsResponse {
   styleUrls: ['./blog-detail.component.scss']
 })
 export class BlogDetailComponent implements OnInit {
-  blog: {};
+  blog: any;
   url: 'api/blogs';
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
