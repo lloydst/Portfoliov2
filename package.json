@@ -10,7 +10,7 @@
     "server": "nodemon ./server/bin/www",
     "ng": "ng",
     "start": "node ./server/bin/www",
-    "prestart": "ng build --aot -prod",
+    "postinstall": "ng build --aot -prod",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e"
