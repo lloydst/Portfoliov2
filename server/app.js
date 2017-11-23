@@ -50,7 +50,7 @@ var app = express();
 // middlewares
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(forceSSL());
+//app.use(forceSSL());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -76,7 +76,7 @@ app.set( 'port', port);
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
-  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  return ( 'Node server is running on port ' + app.get( 'port' ));
   });
 
 
