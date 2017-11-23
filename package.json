@@ -6,8 +6,8 @@
     "server": "nodemon ./server/bin/www",
     "ng": "ng",
     "start": "ng build && node server/bin/www",
+    "postinstall": "ng build",
     "build": "ng build",
-
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
