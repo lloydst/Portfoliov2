@@ -1,6 +1,9 @@
 {
   "name": "boilerplate",
   "version": "0.0.0",
+  "engines": {
+    "node": "6.11.1"
+  },
   "license": "MIT",
   "scripts": {
     "server": "nodemon ./server/bin/www",
