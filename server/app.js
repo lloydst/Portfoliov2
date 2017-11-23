@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var http = require('http');
 
 // routes
 var index = require('./routes/index');
@@ -70,6 +71,12 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
+// Server
+
+var server = app.listen(process.env.PORT || 3000, function () {
+  var port = server.address().port;
+  console.log("App now running on port", port);
+});
 
 
 module.exports = app;

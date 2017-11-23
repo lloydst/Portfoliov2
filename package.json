@@ -1,15 +1,15 @@
 {
   "name": "boilerplate",
   "version": "0.0.0",
-  "main": "./server/bin/www",
+  "main": "./server/app.js",
   "engines": {
     "node": "8.9.1"
   },
   "license": "MIT",
   "scripts": {
-    "server": "nodemon ./server/bin/www",
+    "server": "nodemon ./server/app.js",
     "ng": "ng",
-    "start": "node ./server/bin/www",
+    "start": "node ./server/app.js",
     "postinstall": "ng build --aot -prod",
     "build": "ng build",
     "lint": "ng lint",
