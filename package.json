@@ -9,9 +9,7 @@
   "scripts": {
     "server": "nodemon ./server/bin/www",
     "ng": "ng",
-    "start": "ng build && node ./server/bin/www",
-    "start2":"ng build && node",
-
+    "start": "ng build --aot -prod && node ./server/bin/www",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e"
