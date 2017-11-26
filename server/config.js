@@ -9,5 +9,11 @@ var options = {
 };
 
 var uri = 'mongodb://localhost:27017/portfolio2';
-
+module.exports = {
+  db: {
+    production: 'mongodb://admin:admin@ds153853.mlab.com:53853/portfolio',
+    development: 'mongodb://localhost:27017/portfolio',
+    test: "mongodb://localhost:27017/storeski-test",
+  }
+};
 module.exports = uri, options;
