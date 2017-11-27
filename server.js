@@ -3,11 +3,11 @@ const app = express();
 const path = require('path')
 const api = require('./server/routes/api')
 const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const dotenv = require('dotenv').config()
 
 
 const MURI = process.env.MURI;
-mongoose.connect(MURI, {useMongoClient: true})
+mongoose.connect( MURI, {useMongoClient: true})
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
