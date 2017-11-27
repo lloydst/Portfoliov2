@@ -72,8 +72,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-// Server
-app.set( 'port', port);
+
 
 // Start node server
 app.listen( app.get( 'port' ), function() {

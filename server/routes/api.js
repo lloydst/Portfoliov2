@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Blog = require('../models/blog')
+var Blog = require('../models/blog');
+var mongoose = require('mongoose')
 /* GET home page. */
 
 router.route('/blogs')
