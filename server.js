@@ -66,10 +66,9 @@ app.get('*', (req, res) => {
 const port = process.env.PORT || '3000';
 app.set('port', port);
 
-app.listen( app.get( 'port' ), function() {
-  console.log('Node server is running on '+ app.get('Host')+ app.get( 'port' ));
-  return 'Node server is running on '+ app.get('Host')+ app.get( 'port' )
-  });
+app.listen(port, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 // keep heroku alive always to prevent new users from having to wait for the free dyno to speed up
 
 
