@@ -6,24 +6,21 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var http = require('http');
 
 // routes
-var index = require('./routes/index');
 var api = require('./routes/api');
 
 var port = process.env.PORT || 3000;
 
 //Set up mongoose connection
-var mongoose = require('mongoose');
-
 // need to change this based on env
 var mongoDB = 'mongodb://localhost:27017/portfolio';
 if(process.env.NODE_ENV === 'production') {
   return mongoDB = 'mongodb://admin:admin@ds153853.mlab.com:53853/portfolio';
-} else if(process.env.NODE_ENV === "dev"){
-  return mongoDB = 'mongodb://localhost:27017/portfolio'
-
+}
+else if (process.env.NODE_ENV === "development")
+{
+   return mongoDB = 'mongodb://localhost:27017/portfolio';
 }
 
 
@@ -33,7 +30,9 @@ mongoose.connect(mongoDB, {
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-// express setup
+//Set up mongoose connection
+
+
 
 // for heroku
 const forceSSL = function() {
@@ -46,16 +45,17 @@ const forceSSL = function() {
     next();
   }
 }
+// express setup
 var app = express();
+
 
 // middlewares
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(forceSSL());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(cookieParser());
+app.use(cookieParser());
 
 // express paths
 app.use(express.static(path.join(__dirname, '../dist')));
@@ -83,3 +83,4 @@ app.listen( app.get( 'port' ), function() {
 
 
 
+module.exports = app;
