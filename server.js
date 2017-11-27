@@ -20,7 +20,7 @@ app.use('/projects/hangman', express.static(path.join(__dirname,'./server/views/
 app.use('/api',api)
 app.use('*',express.static(path.join(__dirname, 'dist')))
 
-
-app.listen(3000, function(){
-  console.log('Example app listening on port 3000!')
+const port = process.env.PORT||3000;
+app.listen(process.env.PORT||3000, function(){
+  console.log('Example app listening on port ' + port +'!')
 })
