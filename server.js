@@ -3,8 +3,10 @@ const app = express();
 const path = require('path')
 const api = require('./server/routes/api')
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
 
-const MURI = process.env.MURI ||'mongodb://admin:admin@ds153853.mlab.com:53853/portfolio';
+
+const MURI = process.env.MURI;
 mongoose.connect(MURI, {useMongoClient: true})
 var db = mongoose.connection;
 

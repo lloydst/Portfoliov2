@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Location } from '@angular/common';
 interface BlogsResponse {
   results: any;
 }
@@ -29,12 +30,16 @@ results: any;
     const content = {title: title, body: body};
     this.http.post('api/blogs', content)
     .subscribe();
+    this.refresh();
     console.log(title, body);
   }
   deleteBlog(id) {
     this.http.delete('/api/blogs/' + id)
       .subscribe();
   }
+  refresh(): void {
+    window.location.reload();
+}
   updateBlog(id, newTitle, newBody) {
 
 this.http.put('api/blogs/' + id, {title: newTitle, body: newBody})
