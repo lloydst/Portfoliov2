@@ -1,12 +1,16 @@
 <div class="content">
-<div *ngFor="let b of results">
+
+  <div *ngFor="let b of results">
 
 
-  <h1>{{b.title}}</h1>
-  <div >
-       <p>{{b.body}}</p>
-       <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Go to detail -></button></a>
-       <hr>
+    <h1>{{b.title}}</h1>
+    <div >
+          <p>{{b.body}}</p>
+          <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Go to detail -></button></a>
+
+          <hr>
+    </div>
+
   </div>
-</div>
+
 </div>
