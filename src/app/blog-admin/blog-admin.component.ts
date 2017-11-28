@@ -26,16 +26,18 @@ results: any;
         });
       }
 
-  post(body, title) {
+  post(title, body) {
     const content = {title: title, body: body};
+
     this.http.post('api/blogs', content)
     .subscribe();
-    this.refresh();
-    console.log(title, body);
+    // this.refresh();
+     console.log(title, body);
   }
   deleteBlog(id) {
     this.http.delete('/api/blogs/' + id)
       .subscribe();
+      this.refresh();
   }
   refresh(): void {
     window.location.reload();
@@ -44,5 +46,6 @@ results: any;
 
 this.http.put('api/blogs/' + id, {title: newTitle, body: newBody})
     .subscribe();
+    this.refresh();
   }
 }
