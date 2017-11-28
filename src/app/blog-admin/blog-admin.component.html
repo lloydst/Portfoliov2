@@ -4,6 +4,7 @@
 <textarea rows="1" cols="30" value="" #blogTitle></textarea><br>
 <label>body:</label><br>
 <textarea rows="15" cols="100"value="" #blogBody></textarea><br>
+<!--<div contentEditable='true' style="width: 50%; height: 4em; border: 1px solid black" #blogBody>test</div>-->
   <!-- (click) passes input value to add() and then clears the input -->
   <button (click)="post(blogTitle.value, blogBody.value)">
     add

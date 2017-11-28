@@ -3,9 +3,9 @@
   <div *ngFor="let b of results">
 
 
-    <h1>{{b.title}}</h1>
+    <h1><pre>{{b.title}}</pre></h1>
     <div >
-          <p>{{b.body}}</p>
+          <pre>{{b.body}}</pre>
           <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Go to detail -></button></a>
 
           <hr>
