@@ -8,7 +8,7 @@
   <button (click)="post(blogTitle.value, blogBody.value)">
     add
   </button>
-</div>
+
 
 <div class="blogs">
   <div *ngFor="let b of results">
@@ -20,4 +20,5 @@
     <button class="delete" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
     <hr>
   </div>
+</div>
 </div>

@@ -33,6 +33,7 @@ results: any;
     .subscribe();
     // this.refresh();
      console.log(title, body);
+     this.refresh();
   }
   deleteBlog(id) {
     this.http.delete('/api/blogs/' + id)
