@@ -1,10 +1,12 @@
+<div class="content">
 <div *ngFor="let b of results">
-  {{b._id}} <br> could possibly use a timestamp with date.now() instead
+
 
   <h1>{{b.title}}</h1>
   <div >
        <p>{{b.body}}</p>
-       <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Go to detail</button></a>
+       <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Go to detail -></button></a>
        <hr>
   </div>
+</div>
 </div>

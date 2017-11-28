@@ -1,4 +1,4 @@
-<div style="border: 1px solid black">
+<div class="content">
 <h2>new blog</h2>
 <label>title:</label><br>
 <textarea rows="1" cols="30" value="" #blogTitle></textarea><br>
@@ -12,11 +12,12 @@
 
 <div class="blogs">
   <div *ngFor="let b of results">
-    <div>{{b._id}}</div>
+    <div>id="{{b._id}}"</div>
       <textarea rows="1" cols="30" value="{{b.title}}" #newTitle></textarea><br>
       <textarea rows="15" cols="100"value="{{b.body}}" #newBody></textarea><br>
 
       <button class="update" title="delete blog" (click)="updateBlog([b._id], newTitle.value, newBody.value)">Update</button>
     <button class="delete" title="delete blog" (click)="deleteBlog([b._id])">Del</button>
+    <hr>
   </div>
 </div>

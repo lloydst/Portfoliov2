@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "server": "nodemon ./server/bin/www",
+    "server": "nodemon server.js",
     "ng": "ng",
     "start": "node server.js",
     "postinstall": "ng build --aot -prod",
