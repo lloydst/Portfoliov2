@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config()
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-const MURI = process.env.MURI;
+const MURI = process.env.MURI || 'mongodb://localhost/portfolio';
 mongoose.connect( MURI, {useMongoClient: true})
 var db = mongoose.connection;
 
