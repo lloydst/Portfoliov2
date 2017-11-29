@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { InternshipsComponent } from './internships/internships.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { TruncatePipe } from './custom-pipes/limit-to.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProjectsComponent } from './projects/projects.component';
     HeaderComponent,
     InternshipsComponent,
     NavBarComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    TruncatePipe
   ],
   imports: [
     HttpClientModule,

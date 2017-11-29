@@ -5,7 +5,8 @@
 
     <h1><pre>{{b.title}}</pre></h1>
     <div >
-          <div [innerHTML]="b.body"></div>
+
+          <div [innerHTML]="b.body | limitTo : 60"></div>
           <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Read More -></button></a>
 
           <hr>

@@ -10,7 +10,7 @@ interface BlogsResponse {
   styleUrls: ['./blogs.component.scss']
 })
 
-export class BlogsComponent implements OnInit{
+export class BlogsComponent implements OnInit {
 
   results: any;
 
