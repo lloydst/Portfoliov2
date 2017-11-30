@@ -21,13 +21,13 @@
     <button class="delete" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
 
 
-    <div id="preview" style="display: inline-box">
-      <h1>Preview of: {{newTitle.value}}</h1>
-      <p [innerHTML]="newBody.value"></p>
-    </div>
+
     <hr>
   </div>
-
+  <div id="preview" style="display: inline-box">
+    <h1>Preview of: {{newTitle.value}}</h1>
+    <p [innerHTML]="newBody.value"></p>
+  </div>
 </div>
 
 
