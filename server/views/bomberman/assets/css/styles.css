@@ -20,23 +20,28 @@ cell {
 
      background-image: url("../img/2x2-sand-path,50X50.jpg");
      background-size: 4em;
-     content: ' ';
+
  }
  .bedrock .bedrock{
     background-color: grey !important;
-    background-image: none;
+    background-image: url("../img/9046OT_08_08.jpg");
+    background-size: 4em 4em;
 }
 
 
 .player {
     background-color: blue;
     background-image: none;
+    background-size: 4em;
 }
 .bomb {
-    background-color: red !important;
-    background-image: none;
+    /*background-color: red !important;*/
+    background-image: url("../img/bomb_circle_0.png");
+    background-size: 4em;
 }
 .explosion {
-    background-color: orange;
-    background-image: none;
+    /*background-color: orange;*/
+    background-image: url("../img/fireball.jpg");
+    background-size: 4em 4em;
+
 }

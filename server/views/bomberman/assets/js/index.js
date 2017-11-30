@@ -15,8 +15,8 @@ app.controller('bomberControl', function($scope) {
 
     // makes playerlocation visable
     function playerlocation() {
-        $('.path').removeClass("player");
-        $('.' + yplayer +' .' + xplayer).addClass("player");
+      $('cell').removeClass("player");
+      $('#'+ xplayer + yplayer).addClass("player");
 
     }
     angular.element(document).ready(function () {

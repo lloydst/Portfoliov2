@@ -10,10 +10,10 @@
 </head>
 <body ng-controller="bomberControl">
     <div class="mapContainer path {{y}}" data-ng-class-even="'bedrock'" ng-repeat="y in ycord track by $index">
-        <cell class="path {{x}}" data-ng-class-even="'bedrock'" ng-repeat="x in xcord track by $index" >{{x}}.{{y}}</cell>
+      <cell class="path {{x}}" id="{{x}}{{y}}" data-ng-class-even="'bedrock'" ng-repeat="x in xcord track by $index" ></cell>
     </div>
     <p>move with wasd keys and place a bomb using the space key
-          (changed it to wasd instead of the arrow keys so it wouldn't scroll up or down when the up/down arrow keys were pressed.)
+
     </p>
 
     <script src="./assets/js/lib/jquery.js"></script>
