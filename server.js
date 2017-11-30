@@ -22,6 +22,7 @@ app.use('/projects/jqcalc', express.static(path.join(__dirname,'./server/views/j
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./server/views/angularjscalc')));
 app.use('/projects/bomberman', express.static(path.join(__dirname,'./server/views/bomberman')));
 app.use('/projects/hangman', express.static(path.join(__dirname,'./server/views/hangman')));
+app.use('/images',express.static(path.join(__dirname,'./server/public/img')))
 app.use('/api',api)
 app.use('*',express.static(path.join(__dirname, 'dist')))
 
