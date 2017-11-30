@@ -11,7 +11,7 @@
   </button>
 <hr><hr>
 
-<div class="crud blogs" style="display: flex">
+<div class="crud blogs" style="display: inline-box">
   <div *ngFor="let b of results">
     <div>id="{{b._id}}"</div>
       <textarea rows="1" cols="30" value="{{b.title}}" #newTitle></textarea><br>
@@ -21,13 +21,13 @@
     <button class="delete" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
 
 
-
+    <div id="preview" style="display: flex-box">
+      <h1>Preview of: {{newTitle.value}}</h1>
+      <p [innerHTML]="newBody.value"></p>
+    </div>
     <hr>
   </div>
-  <div id="preview" style="display: inline-box">
-    <h1>Preview of: {{newTitle.value}}</h1>
-    <p [innerHTML]="newBody.value"></p>
-  </div>
+
 </div>
 
 
