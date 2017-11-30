@@ -14,7 +14,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use('/',express.static(path.join(__dirname, 'dist')))
 app.use('/projects/jscalc', express.static(path.join(__dirname,'./server/views/htmlcalc')));
@@ -22,7 +22,7 @@ app.use('/projects/jqcalc', express.static(path.join(__dirname,'./server/views/j
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./server/views/angularjscalc')));
 app.use('/projects/bomberman', express.static(path.join(__dirname,'./server/views/bomberman')));
 app.use('/projects/hangman', express.static(path.join(__dirname,'./server/views/hangman')));
-app.use('/images', express.static(path.join(__dirname,'/server/public/img'))); // to select a img <host>/images/<img-name+type>
+app.use('/images', express.static(path.join(__dirname,'/.server/public/img'))); // to select a img <host>/images/<img-name+type>
 app.use('/api',api)
 app.use('*',express.static(path.join(__dirname, 'dist')))
 
