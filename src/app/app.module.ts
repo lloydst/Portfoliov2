@@ -15,6 +15,9 @@ import { InternshipsComponent } from './internships/internships.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { TruncatePipe } from './custom-pipes/limit-to.pipe';
+import { RegisterComponent } from './register/register.component';
+import { LogoutComponent } from './logout/logout.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { TruncatePipe } from './custom-pipes/limit-to.pipe';
     InternshipsComponent,
     NavBarComponent,
     ProjectsComponent,
-    TruncatePipe
+    TruncatePipe,
+    RegisterComponent,
+    LogoutComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
