@@ -49,4 +49,9 @@ this.http.put('api/blogs/' + id, {title: newTitle, body: newBody})
     .subscribe();
     this.refresh();
   }
+  logout() {
+    this.http.get('/auth/logout')
+    .subscribe();
+    }
 }
+

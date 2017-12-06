@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var Blog = require('../models/blog');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var mid = require('../middleware');
 /* GET home page. */
 
 router.route('/blogs')
 
   // create a blog (accessed at POST http://localhost:3000/api/blogs)
-  .post(function(req, res) {
+  .post(mid.isLoggedIn,function(req, res) {
 
         var blog = new Blog();      // create a new instance of the Bear model
         blog.title = req.body.title;  // set the bears name (comes from the request)
@@ -40,7 +41,7 @@ router.route('/blogs')
         res.json(blog);
       });
     })
-    .put(function(req, res) {
+    .put(mid.isLoggedIn,function(req, res) {
       // use our bear model to find the bear we want
         Blog.findById(req.params.blog_id, function(err, blog) {
           if (err) {
@@ -57,7 +58,7 @@ router.route('/blogs')
               });
             });
         })
-        .delete(function(req, res) {
+        .delete(mid.isLoggedIn,function(req, res) {
           Blog.remove({
               _id: req.params.blog_id
           }, function(err, blog) {

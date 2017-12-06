@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use('/',express.static(path.join(__dirname, 'dist'))).get('/blog-admin', mid.requiresLogin)
+app.use('/',express.static(path.join(__dirname, 'dist'))).get('/blog-admin', mid.requiresLogin, mid.isLoggedIn)
 app.use('/projects/jscalc', express.static(path.join(__dirname,'./server/views/htmlcalc')));
 app.use('/projects/jqcalc', express.static(path.join(__dirname,'./server/views/jquerycalc')));
 app.use('/projects/angularcalc', express.static(path.join(__dirname,'./server/views/angularjscalc')));
