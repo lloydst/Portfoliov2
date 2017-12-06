@@ -7,13 +7,11 @@
 <textarea rows="15" cols="100"value="" #blogBody></textarea><br>
 <!--<div contentEditable='true' style="width: 50%; height: 4em; border: 1px solid black" #blogBody>test</div>-->
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="post(blogTitle.value, blogBody.value)">
-    add
-  </button>
-<hr><hr>
+  <button (click)="post(blogTitle.value, blogBody.value)"> add </button>
+<hr>
 
-<div class="crud blogs" style="display: inline-box">
-  <div *ngFor="let b of results">
+<div class="crud blogs" >
+  <div *ngFor="let b of results" >
     <div>id="{{b._id}}"</div>
       <textarea rows="1" cols="30" value="{{b.title}}" #newTitle></textarea><br>
       <textarea rows="15" cols="100" (keyup)="newBody.value" value="{{b.body}}" #newBody></textarea><br>
@@ -22,7 +20,7 @@
     <button class="delete" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
 
 
-    <div id="preview" style="display: flex-box">
+    <div id="preview">
       <h1>Preview of: {{newTitle.value}}</h1>
       <p [innerHTML]="newBody.value"></p>
     </div>
