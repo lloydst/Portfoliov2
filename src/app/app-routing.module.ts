@@ -9,6 +9,8 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogAdminComponent } from './blog-admin/blog-admin.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '' , component: AboutMeComponent},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'blogs', component: BlogsComponent },
   {path: 'projects', component: ProjectsComponent },
   {path: 'blog-admin', component: BlogAdminComponent },
-  {path: 'blog-detail/:id', component: BlogDetailComponent }
+  {path: 'blog-detail/:id', component: BlogDetailComponent },
+  { path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent }
 
 ];
 
