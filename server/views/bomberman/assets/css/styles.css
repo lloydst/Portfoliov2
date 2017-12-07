@@ -24,8 +24,8 @@ cell {
 
 
 .player {
-    background-color: blue;
-    background-image: none;
+    
+    background-image: url('../img/art-bomberman.gif');
     background-size: 9vw;
 }
 .bomb {
