@@ -17,7 +17,7 @@
       <textarea rows="15" cols="100" (keyup)="newBody.value" value="{{b.body}}" #newBody></textarea><br>
 
       <button class="btn btn-warning" title="delete blog" (click)="updateBlog([b._id], newTitle.value, newBody.value) ">Update</button>
-    <button class="btn btn-danger" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
+      <button class="btn btn-danger" title="delete blog" (click)="deleteBlog([b._id]) ">Del</button>
 
 
     <div id="preview">
