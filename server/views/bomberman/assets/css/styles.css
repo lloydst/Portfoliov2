@@ -1,47 +1,41 @@
 .mapContainer {
-    width:44em;
-}
-div#map{
-    border: 1px solid black;
-    display: inline-flex;
-    width: 4em;
-    height: 4em;
-    text-align: center;
-    border-collapse: collapse
+    width:99vw;
+
 }
 
+
 cell {
-    width: 4em;
-    height: 4em;
+    width: 9vw;
+    height: 9vw;
     display: inline-flex;
 }
 
 .path{
 
      background-image: url("../img/2x2-sand-path,50X50.jpg");
-     background-size: 4em;
+     background-size: 9vw;
 
  }
  .bedrock .bedrock{
     background-color: grey !important;
     background-image: url("../img/9046OT_08_08.jpg");
-    background-size: 4em 4em;
+    background-size: 9vw 9vw;
 }
 
 
 .player {
     background-color: blue;
     background-image: none;
-    background-size: 4em;
+    background-size: 9vw;
 }
 .bomb {
     /*background-color: red !important;*/
     background-image: url("../img/bomb_circle_0.png");
-    background-size: 4em;
+    background-size: 9vw;
 }
 .explosion {
     /*background-color: orange;*/
     background-image: url("../img/fireball.jpg");
-    background-size: 4em 4em;
+    background-size: 9vw 9vw;
 
 }

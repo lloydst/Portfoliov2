@@ -1,9 +1,12 @@
 <div class="content">
-<div *ngFor="let a of internships">
+  <div *ngFor="let a of internships">
   <h2>{{a.company}}</h2>
   <p>{{a.duration}}<br>
     <a href="https://www.{{a.website}}">{{a.website}}</a>
   </p>
+  <p [innerHTML]="a.description"></p>
   </div>
-  <div><h1>TODO: more then just info/ write a story</h1></div>
+  <div>
+
+  </div>
 </div>
