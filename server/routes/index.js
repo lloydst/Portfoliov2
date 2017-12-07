@@ -22,9 +22,8 @@ router.get('/logout', function(req, res, next) {
     req.session.destroy(function(err) {
       if(err) {
         return next(err);
-      } else {
-        return res.redirect('/');
-      }
+      } 
+      
     });
   }
 });
@@ -44,7 +43,7 @@ router.post('/login', function(req, res, next) {
         return next(err);
       }  else {
         req.session.userId = user._id;
-        return res.redirect('/');
+        return res.redirect('/blog-admin');
       }
     });
   } else {

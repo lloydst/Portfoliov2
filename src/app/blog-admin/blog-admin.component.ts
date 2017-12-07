@@ -1,5 +1,5 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Route} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Location } from '@angular/common';
 interface BlogsResponse {
@@ -52,6 +52,7 @@ this.http.put('api/blogs/' + id, {title: newTitle, body: newBody})
   logout() {
     this.http.get('/auth/logout')
     .subscribe();
+    this.router.navigate(['']);
     }
 }
 

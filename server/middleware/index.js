@@ -22,6 +22,7 @@ function isLoggedIn(req, res, next) {
   }
  res.redirect('/login');
 }
+
 module.exports.loggedOut = loggedOut;
 module.exports.requiresLogin = requiresLogin;
 module.exports.isLoggedIn = isLoggedIn;
