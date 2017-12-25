@@ -7,7 +7,7 @@ import { Component , OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Lloyd Stumpel\'s Portfolio';
+  title = "Lloyd Stumpel's Portfolio";
 
 
   constructor() {}

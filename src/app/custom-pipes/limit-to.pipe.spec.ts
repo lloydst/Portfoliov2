@@ -1,7 +1,7 @@
-import { LimitToPipe } from './limit-to.pipe';
+import { TruncatePipe } from './limit-to.pipe';
 
 describe('LimitToPipe', () => {
-  it('create an instance', () => {
+  it('should cut strings', () => {
     const pipe = new LimitToPipe();
     expect(pipe).toBeTruthy();
   });

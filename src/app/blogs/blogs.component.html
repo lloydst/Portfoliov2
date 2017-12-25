@@ -1,17 +1,39 @@
-<div class="content">
-
-  <div *ngFor="let b of results">
 
 
-    <h1><pre>{{b.title}}</pre></h1>
-    <div >
-
-          <div [innerHTML]="b.body | limitTo : 60"></div>
-          <a [routerLink]="['/blog-detail', b._id]"><button type="button" class="btn" >Read More -></button></a>
-
-          <hr>
-    </div>
-
-  </div>
-
-</div>
+<!--Section: Blog v.1-->
+<section class="section pb-3 text-center text-lg-left">
+  
+      <!--Section heading-->
+      <h1 class="section-heading h1 pt-4">Recent posts</h1>
+      
+      <!--Grid row-->
+      <div class="row" *ngFor="let b of results">
+  
+          <!--Grid column-->
+          <div class="col-lg-5 col-xl-4 offset-xl-1 pb-3">
+              <!--Featured image-->
+              <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
+                  <img src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image for first version of blog listing">
+                  <a>
+                      <div class="mask"></div>
+                  </a>
+              </div>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-7 col-xl-6">
+              <!--Excerpt-->
+              <a href="" class="green-text"><h6 class="font-bold pb-1"><i class="fa fa-cutlery"></i> {{b.tag}}</h6></a>
+              <h4 class="mb-4"><strong>{{b.title}}</strong></h4>
+              <p [innerHTML]="b.body | limitTo : 120"></p>
+              <p>by <a><strong>{{b.author}}</strong></a>, last edited: {{b.lastedit}}</p>
+              <a class="btn btn-success mb-3 waves-light" mdbRippleRadius [routerLink]="['/blog-detail', b._id]">Read more</a>
+          </div>
+          <!--Grid column-->
+          
+      </div>
+      <hr class="hr-width mb-5 mt-4 pb-3">
+  
+  </section>
+  <!--Section: Blog v.1-->
